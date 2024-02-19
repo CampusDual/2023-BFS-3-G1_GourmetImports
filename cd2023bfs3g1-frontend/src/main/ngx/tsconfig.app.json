@@ -6,14 +6,13 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts"
+    "src/polyfills.ts",
   ],
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
   ],
   "exclude": [
     "src/test.ts",
-    "src/**/*.spec.ts",
-    "src/environments/*.ts"
+    "src/**/*.spec.ts"
   ]
 }

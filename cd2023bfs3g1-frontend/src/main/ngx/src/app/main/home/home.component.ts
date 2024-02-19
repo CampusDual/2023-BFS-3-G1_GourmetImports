@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { OTranslateService } from "ontimize-web-ngx";
 
 @Component({
-  selector: 'home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: "home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  public currentLang: string;
 
   constructor(
-    private router: Router,
-    private actRoute: ActivatedRoute
+    protected router: Router,
+    private translateService: OTranslateService
   ) {
+    this.currentLang = this.translateService.getCurrentLang();
   }
 
-  ngOnInit() {
+  public gotoProducts() {
+    this.router.navigate(["/main/sectionfood"]);
+    return false;
   }
-
-  navigate() {
-    this.router.navigate(['../', 'login'], { relativeTo: this.actRoute });
-  }
-
 }
