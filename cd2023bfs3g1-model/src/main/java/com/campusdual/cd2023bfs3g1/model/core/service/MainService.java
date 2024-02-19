@@ -1,11 +1,10 @@
 package com.campusdual.cd2023bfs3g1.model.core.service;
 
-import java.util.Map;
-
+import com.campusdual.cd2023bfs3g1.api.core.service.IMainService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.campusdual.cd2023bfs3g1.api.core.service.IMainService;
+import java.util.Map;
 
 @Service
 public class MainService implements IMainService {
